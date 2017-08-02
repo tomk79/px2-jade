@@ -20,15 +20,14 @@ class jade{
 		foreach( $px->bowl()->get_keys() as $key ){
 			$src = $px->bowl()->pull( $key );
 
-			// Using Library "ronan-gloo/jade-php" ==> see https://github.com/ronan-gloo/jade-php
-			$jade = new \Jade\Jade([
+			// Using Library "pug-php/pug" ==> see https://packagist.org/packages/pug-php/pug
+			$pug = new \Pug\Pug(array(
 				'prettyprint' => true,
-				// 'extension' => '.jade',
-				// 'cache' => $px->realpath_plugin_private_cache('jade_caches/'),
-			]);
-			ob_start();
-			$results = $jade->render($src, $data);
-			$src = ob_get_clean();
+				// 'extension' => '.pug',
+				// 'cache' => 'pathto/writable/cachefolder/'
+			));
+			$src = $pug->render($src, $data);
+			// var_dump($src);
 
 			$src = $px->bowl()->replace( $src, $key );
 		}

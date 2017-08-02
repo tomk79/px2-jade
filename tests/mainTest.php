@@ -1,12 +1,12 @@
 <?php
 /**
  * Test for tomk79\px2-jade
- * 
+ *
  * $ cd (project dir)
- * $ ./vendor/phpunit/phpunit/phpunit tests/px2-jadeTest.php px2Jade
+ * $ composer test
  */
 
-class px2JadeTest extends PHPUnit_Framework_TestCase{
+class mainTest extends PHPUnit_Framework_TestCase{
 
 	/**
 	 * ファイルシステムユーティリティ
@@ -31,8 +31,9 @@ class px2JadeTest extends PHPUnit_Framework_TestCase{
 			__DIR__.'/testData/standard/.px_execute.php' ,
 			'/sample_pages/sample1.html' ,
 		] );
+		// var_dump($output);
 
-		$this->assertEquals( 1, preg_match('/'.preg_quote('<p class=\'center\'>','/').'(?:\r\n|\r|\n)\s*'.preg_quote('sample text','/').'(?:\r\n|\r|\n)\s*'.preg_quote('</p>','/').'/s', $output) );
+		$this->assertEquals( 1, preg_match('/'.preg_quote('<p class="center">sample text</p>','/').'/s', $output) );
 
 		// 後始末
 		$output = $this->passthru( [
@@ -54,11 +55,12 @@ class px2JadeTest extends PHPUnit_Framework_TestCase{
 			__DIR__.'/testData/standard/.px_execute.php' ,
 			'/sample_pages/sample2.html' ,
 		] );
+		// var_dump($output);
 
-		$this->assertEquals( 1, preg_match('/'.preg_quote('<style type=\'text/css\'>','/').'/s', $output) );
+		$this->assertEquals( 1, preg_match('/'.preg_quote('<style type="text/css">','/').'/s', $output) );
 		$this->assertEquals( 1, preg_match('/'.preg_quote('.cont_exam{','/').'/s', $output) );
 		$this->assertEquals( 1, preg_match('/'.preg_quote('font-size:120%;','/').'/s', $output) );
-		$this->assertEquals( 1, preg_match('/'.preg_quote('<p class=\'cont_exam\'>','/').'/s', $output) );
+		$this->assertEquals( 1, preg_match('/'.preg_quote('<p class="cont_exam">','/').'/s', $output) );
 		$this->assertEquals( 1, preg_match('/'.preg_quote('スタイルが効いていれば、文字が赤くなっているはずです。','/').'/s', $output) );
 
 		// 後始末
