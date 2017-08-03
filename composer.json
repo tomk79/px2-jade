@@ -23,7 +23,6 @@
     "require-dev": {
         "pickles2/px-fw-2.x": "^2.0" ,
         "tomk79/filesystem": "^1.0",
-        "phpdocumentor/phpdocumentor": "2.7.*",
         "phpunit/phpunit": "4.1.*"
     },
     "autoload": {

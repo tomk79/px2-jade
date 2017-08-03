@@ -2,9 +2,9 @@ tomk79/px2-jade
 ======================
 
 [Pickles 2](http://pickles2.pxt.jp/) 用のプラグインです。
-Jade文法でコンテンツをコーディングできる機能を追加します。
+Pug(Jade)文法でコンテンツをコーディングできる機能を追加します。
 
-Jadeパーサー ["kylekatarnls/jade-php"](https://github.com/kylekatarnls/jade-php) をラップしたものです。
+Pug(Jade)パーサー ["kylekatarnls/jade-php"](https://github.com/kylekatarnls/jade-php) をラップしたものです。
 
 
 ## 導入手順 - Setup
@@ -52,6 +52,28 @@ $ composer update
 		$conf->funcs->processor->html ,
 	];
 ```
+
+拡張子 `.pug` に適用したい場合は、 `$conf->funcs->processor->pug` に設定してください。
+
+### 4. Pug(Jade)コンテンツを記述する
+
+ファイル名の後ろに `.jade` を付加したコンテンツが、Jade文法として処理されます。(例： `index.html` の場合、 `index.html.jade` にリネームする)
+
+```jade
+div
+	p sample text
+```
+
+
+## 更新履歴 - Change log
+
+### Pickles Framework 2.0.1 (20??年??月??日)
+
+- パーサーライブラリを `ronan-gloo/jadephp` から `pug-php/pug` に変更。
+
+### Pickles Framework 2.0.0 (2015年1月27日)
+
+- Initial Release.
 
 
 ## ライセンス - License
