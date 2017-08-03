@@ -29,5 +29,12 @@
         "files": [
             "php/px2-jade.php"
         ]
+    },
+    "extra": {
+        "px2package": {
+            "name": "Pug(Jade) Processor",
+            "type": "processor",
+            "path": "php/px2-jade.php"
+        }
     }
 }
