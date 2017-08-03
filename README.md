@@ -18,7 +18,7 @@ Pug(Jade)パーサー ["kylekatarnls/jade-php"](https://github.com/kylekatarnls/
 	〜 中略 〜
     "require": {
         "php": ">=5.3.0" ,
-        "tomk79/px-fw-2.x": "^2.0",
+        "pickles2/px-fw-2.x": "^2.0",
         "tomk79/px2-jade": "^2.0"
     },
 	〜 中略 〜
@@ -67,11 +67,11 @@ div
 
 ## 更新履歴 - Change log
 
-### Pickles Framework 2.0.1 (20??年??月??日)
+### tomk79/px2-jade 2.0.1 (2017年8月3日)
 
 - パーサーライブラリを `ronan-gloo/jadephp` から `pug-php/pug` に変更。
 
-### Pickles Framework 2.0.0 (2015年1月27日)
+### tomk79/px2-jade 2.0.0 (2015年1月27日)
 
 - Initial Release.
 
