@@ -4,7 +4,7 @@ tomk79/px2-jade
 [Pickles 2](http://pickles2.pxt.jp/) 用のプラグインです。
 Pug(Jade)文法でコンテンツをコーディングできる機能を追加します。
 
-Pug(Jade)パーサー ["kylekatarnls/jade-php"](https://github.com/kylekatarnls/jade-php) をラップしたものです。
+Pug(Jade)パーサー ["pug-php/pug"](https://github.com/pug-php/pug) をラップしたものです。
 
 
 ## 導入手順 - Setup
